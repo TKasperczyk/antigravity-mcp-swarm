@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "antigravity-mcp-swarm"
+version = "0.1.0"
+description = "Parallel Antigravity (agy) MCP server with live task monitoring, batch wait, worktree isolation, and MCP Tasks support"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "TKasperczyk"},
+]
+keywords = ["mcp", "antigravity", "agy", "gemini", "async", "parallel", "swarm", "claude"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "mcp-swarm-core>=0.1.0,<0.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/TKasperczyk/antigravity-mcp-swarm"
+Repository = "https://github.com/TKasperczyk/antigravity-mcp-swarm"
+Issues = "https://github.com/TKasperczyk/antigravity-mcp-swarm/issues"
+
+[project.scripts]
+antigravity-mcp-swarm = "antigravity_mcp_swarm:main"
+
+[tool.setuptools]
+py-modules = ["antigravity_mcp_swarm"]
